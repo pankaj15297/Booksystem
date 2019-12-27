@@ -7,8 +7,8 @@ module Api
 			end
 
 			def show
-				articles = Article.find(params[:id])
-				render json: {status: 'SUCCESS', message: 'Loaded articles', data: articles}, status: :ok
+				article = Article.find(params[:id])
+				render json: {status: 'SUCCESS', message: 'Loaded article', data: article}, status: :ok
 			end
 		end
 	end
